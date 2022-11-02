@@ -1,22 +1,46 @@
 <!-- Search navbar -->
-<div class="search-form d-lg-flex d-inline-block <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
+<style>
+input::placeholder {
+    color: #888889!important;
+  }
+input:-moz-placeholder {
+    color: #888889;
+  }
+
+input::-moz-placeholder {
+    color: #888889;
+  }
+
+input.nosubmit {
+  border: 1px solid #555;
+  width: 100%;
+  padding: 9px 4px 9px 40px;
+  background: url('/images/icons8-search.svg');
+  background-repeat:no-repeat;
+  background-clip: padding-box;
+  background-blend-mode: overlay;
+  background-size:contain
+}
+</style>
+
+<div class="search-form d-lg-flex d-inline-block mb-sm <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
 	<div class="input-group" style="width: 100%;" title='<%= gettext("Search by address, token symbol name, transaction hash, or block number") %>'>
-		<div class="form-control search-control me auto <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
+		<div class="form-control search-control me auto pl-0 <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
 			<input
 				id="<%= @id %>"
-				class="main-search-autocomplete"
+				class="main-search-autocomplete br-3 nosubmit"
 				data-test="search_input"
-				data-chain-id="<%= Application.get_env(:block_scout_web, :chain_id) %>"
+				data-chain-id="<%= System.get_env("CHAIN_ID") %>"
 				data-display-token-icons="<%= System.get_env("DISPLAY_TOKEN_ICONS") %>"
 				type="text"
 				tabindex="1"
 			>
 		</div>
-		<div class="input-group-append left">
+		<!--<span class="input-group-append left">
 			<button class="input-group-text" id="search-icon">
 			<%= render BlockScoutWeb.IconsView, "_search_icon.html" %>
 			</button>
-		</div>
+		</span>
 		<div class="input-group-append right desktop-only">
 			<div
 			id="slash-icon"
@@ -29,7 +53,7 @@
 			>
 			/
 			</div>
-		</div>
+		</div>-->
 	</div>
 	<button class="btn btn-outline-success my-2 my-sm-0 sr-only hidden" type="submit"><%= gettext "Search" %></button>
 </div>

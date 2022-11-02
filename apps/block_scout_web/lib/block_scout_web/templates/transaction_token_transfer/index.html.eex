@@ -14,6 +14,18 @@
           <span href="#" class="alert-link"><%= gettext("Something went wrong, click to reload.") %></span>
         </button>
 
+        <table class="table fixed-layout mb-0">
+          <thead>
+            <tr class="table-head">
+              <th class="wideRow">Txn Hash</th>
+              <th class="screenRow">Token Type</th>
+              <th class="screenRow">From</th>
+              <th class="screenRow"> To</th>
+              <th class="screenRow"> Stake</th>
+            </tr>
+          </thead>
+        </table>
+
         <div data-empty-response-message style="display: none;">
           <div class="tile tile-muted text-center" data-selector="empty-logs-list">
             <%= gettext "There are no token transfers for this transaction" %>
@@ -23,9 +35,9 @@
         <div data-items>
           <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
         </div>
-
-        <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
-
+        <div class="col-md-12 py-2">
+          <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
+        </div>
     </div>
   </div>
   <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/token-transfers-toggle.js") %>"></script>
