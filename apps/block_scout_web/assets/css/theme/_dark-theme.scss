@@ -96,8 +96,8 @@ $a-blue:#00bcd4;
     }
     // hero stats
     .layout-container .dashboard-banner-container {
-        background-image: none;
-        background-color: #164a50;
+        background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bcd4, #607d8b) !important;
+        background-color: #0B0442!important;
     }
     .dashboard-banner-network-plain-container,
     .dashboard-banner-network-plain-container::after {
@@ -1035,4 +1035,8 @@ $a-blue:#00bcd4;
 .dark-theme-applied .btn-no-border-link-to-tems {
     border-color: $dark-primary;
     color: $dark-primary;
+}
+
+.dark-theme-applied .table-hover tbody tr:hover {
+    background-color: #07070b;
 }

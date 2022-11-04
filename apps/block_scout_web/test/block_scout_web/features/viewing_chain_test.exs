@@ -103,7 +103,7 @@ defmodule BlockScoutWeb.ViewingChainTest do
 
       session
       |> ChainPage.visit_page()
-      |> assert_has(ChainPage.transactions(count: 5))
+      |> assert_has(ChainPage.transactions(count: 10))
     end
 
     test "contract creation is shown for to_address", %{session: session, block: block} do

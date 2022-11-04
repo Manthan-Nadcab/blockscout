@@ -371,7 +371,7 @@ defmodule Indexer.Block.Realtime.Fetcher do
     node_delay = Timex.diff(time_before, timestamp, :seconds)
     Prometheus.Instrumenter.node_delay(node_delay)
 
-    Logger.debug("Block #{number} fetching duration: #{fetch_duration / 1_000_000}s. Node delay: #{node_delay}s.",
+    Logger.debug("#{number} fetching duration: #{fetch_duration / 1_000_000}s. Node delay: #{node_delay}s.",
       fetcher: :block_import_timings
     )
   end

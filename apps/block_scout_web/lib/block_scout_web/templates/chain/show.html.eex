@@ -168,7 +168,7 @@
            </div>
          </div>
         </div>
-        <div hidden data-selector="loading-message" class="col-lg-3" >
+        <div hidden data-selector="loading-message" class="col-lg-3">
          <div data-selector="chain-block">
            <div class="tile tile-type-block n-p d-flex flex-column">
              <a class="tile-title mb-0 font16"><span class="tile-loader tile-label-loader"></span> </a>
@@ -179,7 +179,7 @@
            </div>
          </div>
         </div>
-        <div hidden data-selector="loading-message" class="col-lg-3" >
+        <div hidden data-selector="loading-message" class="col-lg-3">
          <div data-selector="chain-block">
            <div class="tile tile-type-block n-p d-flex flex-column">
              <a class="tile-title mb-0 font16"><span class="tile-loader tile-label-loader"></span> </a>
@@ -190,7 +190,7 @@
            </div>
          </div>
         </div>
-        <div hidden data-selector="loading-message" class="col-lg-3" >
+        <div hidden data-selector="loading-message" class="col-lg-3">
          <div data-selector="chain-block">
            <div class="tile tile-type-block n-p d-flex flex-column">
              <a class="tile-title mb-0 font16"><span class="tile-loader tile-label-loader"></span> </a>
@@ -211,6 +211,7 @@
     <h2 class="heading mb-3"><%= gettext "Transactions" %></h2>
     <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
   </div>
+
 
     <div class="card card-chain-transactions">
     <div class="card-body p-0">
@@ -312,8 +313,7 @@
 }
 
 .table-hover tbody tr:hover {
-  background-color: #111111;
-  color: #fff;
+  background-color: #fefefe;
 }
 
 .table-active,

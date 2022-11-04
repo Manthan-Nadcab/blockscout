@@ -9,6 +9,50 @@
     }
 }
 
+.bg-gray {
+    background-color: #a3a9b5!important;
+}
+
+.navbar.navbar-primary .navbar-nav .nav-link:hover,
+.navbar.navbar-primary .navbar-nav .nav-link.activeLink,
+.navbar.navbar-primary .navbar-nav .nav-link:focus {
+    color: #181818;
+}
+
+// btns
+.btn-line {
+    background-color: transparent;
+    border-color: $secondary!important;
+    color: $secondary!important;
+    &:hover {
+        border-color: $secondary!important;
+        background-color: $secondary!important;
+        color: #fff!important;
+    }
+}
+
+.tile a {
+    color: #333 !important;
+    font-size: 14px;
+}
+
+.tile-type-block {
+    border-left: 1px solid #dee2e6!important;
+}
+
+.dashboard-banner-network-stats-label {
+    color: #181818!important;
+}
+
+.dashboard-banner-network-stats-value {
+    color: #181818!important;
+}
+
+.dark-theme-applied .dashboard-banner-network-stats-label,
+.dark-theme-applied .dashboard-banner-network-stats-value {
+    color: #fff!important;
+}
+
 .logs-hash {
     line-height: 24px !important;
 }
@@ -64,11 +108,10 @@
     text-decoration: none;
 }
 
-.layout-container .dashboard-banner-container {
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bcd4, #607d8b) !important;
-    background-color: #0B0442;
-}
-
+// .layout-container .dashboard-banner-container {
+//     background-image: none;
+//     background-color: #343a40!important;
+// }
 .layout-container {
     display: flex;
     flex-direction: column;
@@ -84,7 +127,7 @@
 }
 
 .table-head {
-    background-color: #f6f8fb;
+    background-color: #fee100;
 }
 
 .table {
@@ -137,7 +180,7 @@
 }
 
 .table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: #f3f3f3;
 }
 
 .table-active,
@@ -393,7 +436,7 @@
 }
 
 .dark-theme-applied .tile-bottom-contents {
-    background-color: #2A2A2A;
+    background-color: #2a2a2a!important;
 }
 
 dl:last-child {
@@ -488,4 +531,8 @@ dl:last-child {
     .mt-sm {
         margin-top: 15px;
     }
+}
+
+.dark-theme-applied .dashboard-banner-chart>canvas {
+    filter: invert(1) brightness(5.2);
 }
