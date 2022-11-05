@@ -1,4 +1,8 @@
 @import '~@tarekraafat/autocomplete.js/dist/css/autoComplete.01.css';
+.shadow {
+    box-shadow: 0 0 30px 0 rgba(202, 199, 226, 0.5)!important;
+}
+
 .layout-container {
     display: flex;
     flex-direction: column;
@@ -7,6 +11,12 @@
         flex-grow: 1;
         background-color: #fbfafc;
     }
+}
+
+.navbar.navbar-primary .form-control {
+    background: #fff;
+    border-color: #fff;
+    color: #333;
 }
 
 .bg-gray {

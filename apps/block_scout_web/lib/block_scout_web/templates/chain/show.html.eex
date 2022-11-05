@@ -159,7 +159,7 @@
         </button>
         <div hidden data-selector="loading-message" class="col-lg-3" >
          <div data-selector="chain-block">
-           <div class="tile tile-type-block n-p d-flex flex-column">
+           <div class="tile tile-type-block n-p d-flex flex-column shadow">
              <a class="tile-title mb-0 font16"><span class="tile-loader tile-label-loader"></span> </a>
              <div class="tile-bottom-contents">
                <div class="dark-block-loader"></div>

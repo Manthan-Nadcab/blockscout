@@ -25,7 +25,7 @@ input.nosubmit {
 
 <div class="search-form d-lg-flex d-inline-block mb-sm <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
 	<div class="input-group" style="width: 100%;" title='<%= gettext("Search by address, token symbol name, transaction hash, or block number") %>'>
-		<div class="form-control search-control me auto pl-0 <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
+		<div class="form-control search-control me auto  bg-transparent border-0 <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
 			<input
 				id="<%= @id %>"
 				class="main-search-autocomplete br-3 nosubmit"
