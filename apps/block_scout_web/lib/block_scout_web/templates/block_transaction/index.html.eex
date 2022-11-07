@@ -27,13 +27,30 @@
             <%= gettext "There are no transactions for this block." %>
           </div>
         </div>
+        <div class="overflow-auto clearfix">
+        <!--table heading for Internal transfer (txn)-->
+        <table class="table fixed-layout table-hover mb-0">
+          <thead>
+            <tr class="table-head">
+              <th class="wideRow">Txn Hash</th>
+              <th class="screenRow">Block</th>
+              <th class="screenRow">Age</th>
+              <th class="screenRow">From</th>
+              <th class="screenRow">To</th>
+              <th class="screenRow">Amount</th>
+              <th class="screenRow"> Txn Type</th>
+              <th class="screenRow"> Type Address</th>
+            </tr>
+          </thead>
+        </table>
+
 
         <div data-items>
           <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
         </div>
 
         <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
-
+    </div>
     </div>
     <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/async-listing-load.js") %>"></script>
     <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/token-transfers-toggle.js") %>"></script>

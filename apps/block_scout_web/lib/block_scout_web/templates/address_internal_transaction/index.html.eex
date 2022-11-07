@@ -1,7 +1,7 @@
 <section class="container">
   <% is_proxy = BlockScoutWeb.AddressView.smart_contract_is_proxy?(@address) %>
 
-  <%= render BlockScoutWeb.AddressView, "overview.html", address: @address, is_proxy: is_proxy, conn: @conn, exchange_rate: @exchange_rate, coin_balance_status: @coin_balance_status, counters_path: @counters_path, tags: @tags %>
+ <%= render BlockScoutWeb.AddressView, "overview.html", address: @address, is_proxy: is_proxy, conn: @conn, exchange_rate: @exchange_rate, coin_balance_status: @coin_balance_status, counters_path: @counters_path, tags: @tags %>
 
   <section data-page="address-internal-transactions">
     <div class="card">
@@ -49,6 +49,25 @@
         <button data-error-message class="alert alert-danger col-12 text-left" style="display: none;">
           <span href="#" class="alert-link"><%= gettext("Something went wrong, click to reload.") %></span>
         </button>
+
+          <!--table heading for Internal transfer (/address)-->
+        <table class="table fixed-layout table-hover mb-0">
+          <thead>
+            <tr class="table-head">
+              <th class="wideRow">Txn Hash</th>
+              <th class="screenRow">Block</th>
+              <th class="screenRow">Age</th>
+              <th class="screenRow">From</th>
+              <th class="screenRow">To</th>
+              <th class="screenRow">Amount</th>
+              <th class="screenRow"> Txn Type</th>
+              <th class="screenRow"> Type Address</th>
+            </tr>
+          </thead>
+        </table>
+
+
+
         <div data-empty-response-message style="display: none;">
           <div class="tile tile-muted text-center">
             <span data-selector="empty-internal-transactions-list"><%= gettext "There are no internal transactions for this address." %></span>

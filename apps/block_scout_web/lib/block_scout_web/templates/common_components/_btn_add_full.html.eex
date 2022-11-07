@@ -1,5 +1,5 @@
 <button
-    class="btn-add-full btn-full-primary <%= if assigns[:extra_class] do @extra_class end %>"
+    class="btn btn-warning mr-2 mb-2 <%= if assigns[:extra_class] do @extra_class end %>"
     <%= if assigns[:disabled] do "disabled" end %>
 >
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">

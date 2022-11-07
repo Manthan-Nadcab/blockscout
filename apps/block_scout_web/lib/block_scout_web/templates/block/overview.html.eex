@@ -80,7 +80,7 @@
               <%= gettext("Transactions") %>
             </dt>
             <dd class="col-sm-9 col-lg-10">
-              <a href="#txs" class="page-link bs-label large btn-no-border-link-to-tems">
+              <a href="#txs" class="page-link bs-label large">
                 <%= if @block_transaction_count == 1 do %>
                   <%= gettext "%{count} Transaction", count: @block_transaction_count %>
                 <% else %>
@@ -226,7 +226,7 @@
                 </dt>
                 <dd class="col-sm-9 col-lg-10"><%= format_wei_value(%Wei{value: priority_fee}, :ether) %></dd>
             </dl>
-          <% end %>  
+          <% end %>
           <%= if show_reward?(@block.rewards) do %>
             <hr>
             <%= for block_reward <- @block.rewards do %>
@@ -268,4 +268,4 @@
     </div>
 </section>
 
-<%= render BlockScoutWeb.Advertisement.BannersAdView, "_adbutler_banner.html", conn: @conn %> 
+<%= render BlockScoutWeb.Advertisement.BannersAdView, "_adbutler_banner.html", conn: @conn %>

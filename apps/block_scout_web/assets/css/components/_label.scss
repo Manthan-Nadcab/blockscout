@@ -10,7 +10,6 @@
     font-size: 12px;
     padding: 5px;
     line-height: normal;
-
     &.right {
         margin-left: auto;
         float: right;
@@ -56,7 +55,7 @@
         color: #fff;
     }
     &.validator {
-        background: $primary;
+        background: $tertiary;
         color: #fff;
     }
     &.faucet {
@@ -181,11 +180,11 @@
         color: #fff;
     }
     &.ascendex-hacker {
-        background: rgba(222,68,55,.1);
+        background: rgba(222, 68, 55, .1);
         color: #de4437;
     }
     &.heist {
-        background: rgba(222,68,55,.1);
+        background: rgba(222, 68, 55, .1);
         color: #de4437;
     }
     &.gbc {

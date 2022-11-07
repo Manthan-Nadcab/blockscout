@@ -13,7 +13,7 @@
           <h2 class="card-title float-left"><%= gettext "Transactions" %></h2>
           <div class="top-pagination-outer-container float-right">
             <div class="dropdown u-push-sm">
-              <button data-test="filter_dropdown" class="btn-dropdown-line basic dropdown-toggle" type="button"
+              <button data-test="filter_dropdown" class="btn-dropdown-line dropdown-toggle" type="button"
                 id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Filter: <%= format_current_filter(@filter) %>
               </button>
@@ -49,6 +49,25 @@
         <button data-error-message class="alert alert-danger col-12 text-left" style="display: none;">
           <span href="#" class="alert-link"><%= gettext("Something went wrong, click to reload.") %></span>
         </button>
+        <div class="overflow-auto clearfix">
+
+
+        <!--table heading for transfer (/address)-->
+        <table class="table fixed-layout table-hover mb-0">
+          <thead>
+            <tr class="table-head">
+              <th class="wideRow">Txn Hash</th>
+              <th class="screenRow">Method</th>
+              <th class="screenRow">Block</th>
+              <th class="screenRow">Age</th>
+              <th class="screenRow">From</th>
+              <th class="screenRow">To</th>
+              <th class="screenRow">Amount</th>
+              <th class="screenRow">Txn Fee</th>
+              <th class="screenRow"> Status</th>
+            </tr>
+          </thead>
+        </table>
 
         <div data-empty-response-message style="display: none;">
           <div class="tile tile-muted text-center" data-selector="empty-transactions-list">
@@ -63,6 +82,7 @@
         <div class="transaction-bottom-panel">
           <%= render BlockScoutWeb.CommonComponentsView, "_csv_export_button.html", address: Address.checksum(@address.hash), type: "transactions", conn: @conn %>
           <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
+        </div>
         </div>
 
       </div>
