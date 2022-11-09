@@ -88,11 +88,11 @@ config :ueberauth, Ueberauth,
   providers: [
     auth0_api: {
       Ueberauth.Strategy.Auth0,
-      [callback_url: "https://blockscout.com/xdai/mainnet/auth/auth0_api/api_callback"]
+      [callback_url: "http://localhost:4000/auth/auth0_api/api_callback"]
     },
     auth0: {
       Ueberauth.Strategy.Auth0,
-      [callback_url: "https://blockscout.com/xdai/mainnet/auth/auth0/callback"]
+      [callback_url: "http://localhost:4000/auth/auth0/callback"]
     }
   ]
 
