@@ -1,10 +1,10 @@
-#!/bin/bash
+ #!/bin/bash
 #export MIX_ENV=prod
-sudo chmod -R 777 /home/nadcab/Desktop/TRALITY/blockscout
+#sudo chmod -R 777 /home/nadcab/Desktop/TRALITY/blockscout
 export ETHEREUM_JSONRPC_VARIANT=parity
 export ETHEREUM_JSONRPC_HTTP_URL=https://rpc01.taralityscan.com/
 export ETHEREUM_JSONRPC_WS_URL=ws://rpc01.taralityscan.com/ws
-export DATABASE_URL=postgres://taralscan:tarality@localhost:5432/blockscout
+export DATABASE_URL=postgres://tarality:tarality@localhost:5432/blockscout?ssl=false
 export ETHEREUM_JSONRPC_TRACE_URL=https://rpc01.taralityscan.com
 export NETWORK=Tarality Scan
 export SUBNETWORK="Testnet"
@@ -65,7 +65,7 @@ export INDEXER_MEMORY_LIMIT=7
 
 # /bin/mix ecto.drop
 # /bin/mix ecto.create 
-# /bin/mix ecto.migrate
-/bin/mix phx.digest.clean 
-/bin/mix phx.digest
-/bin/mix phx.server
+# /usr/local/bin/mix ecto.migrate
+/usr/local/bin/mix phx.digest.clean 
+/usr/local/bin/mix phx.digest
+/usr/local/bin/mix phx.server
