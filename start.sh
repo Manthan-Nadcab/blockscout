@@ -2,19 +2,19 @@
 #export MIX_ENV=prod
 #sudo chmod -R 777 /home/nadcab/Desktop/TRALITY/blockscout
 export ETHEREUM_JSONRPC_VARIANT=parity
-export ETHEREUM_JSONRPC_HTTP_URL=https://rpc01.taralityscan.com/
+export ETHEREUM_JSONRPC_HTTP_URL=https://rpc01.taralityscan.com
 export ETHEREUM_JSONRPC_WS_URL=ws://rpc01.taralityscan.com/ws
 export DATABASE_URL=postgres://tarality:tarality@localhost:5432/blockscout?ssl=false
 export ETHEREUM_JSONRPC_TRACE_URL=https://rpc01.taralityscan.com
 export NETWORK=Tarality Scan
-export SUBNETWORK="Testnet"
+export SUBNETWORK="Taral Testnet"
 export LOGO=/images/taral-logo.png
 export LOGO_FOOTER=/images/taral-logo.png
 export ETHEREUM_JSONRPC_TRANSPORT=http
 export NETWORK_PATH=/
-export API_PATH=/
-export BLOCKSCOUT_HOST=testnet.taralityscan.com
-export BLOCKSCOUT_PROTOCOL=https
+export API_PATH=/                                                                                                                                                                             
+export BLOCKSCOUT_HOST=localhost
+export BLOCKSCOUT_PROTOCOL=http
 export SECRET_KEY_BASE=e+E4TnErUa0Fme4COz2IboFKyLP/uO5H/oyB1vRncV+8WgHhYVCd98iAsf6UWss+
 # export CHECK_ORIGIN=false
 # export PORT=4000
@@ -28,10 +28,10 @@ export DISABLE_EXCHANGE_RATES=true
 export ENABLE_TXS_STATS=true
 export SHOW_PRICE_CHART=true
 export SHOW_TXS_CHART=true
-# export EXCHANGE_RATES_COINGECKO_COIN_ID=tarality
-# export EXCHANGE_RATES_SOURCE=coin_gecko
+export EXCHANGE_RATES_COINGECKO_COIN_ID=tarality
+export EXCHANGE_RATES_SOURCE=coin_gecko
 # export EXCHANGE_RATES_COINGECKO_API_KEY=
-# export COINGECKO_COIN_ID=tarality
+export COINGECKO_COIN_ID=tarality
 
 export APPS_MENU=true
 # export EXTERNAL_APPS='[{ "title": "Ana Bridge", "url": "https://bridge.inrx.io/" } ]'
@@ -61,6 +61,15 @@ export API_RATE_LIMIT=100
 export API_RATE_LIMIT_BY_KEY=30
 export API_RATE_LIMIT_BY_IP=30
 export INDEXER_MEMORY_LIMIT=7
+export ACCOUNT_ENABLED=true
+export ACCOUNT_AUTH0_CLIENT_ID=zG6Z39kVsnPx1sJgzTdLirxXG5obdXji
+export ACCOUNT_AUTH0_CLIENT_SECRET=ROcKNzSO-a545tmAYATjCn2IYircaD7sY3sGGPZqzJg6gat4eBDg5fJcNBjBaiZa
+#export ACCOUNT_REDIS_URL: "redis://localhost:6379"
+export ACCOUNT_POOL_SIZE=50
+export ACCOUNT_AUTH0_DOMAIN=dev-cwlk28b0nlynl0wc.us.auth0.com
+export ACCOUNT_AUTH0_LOGOUT_URL=https://dev-cwlk28b0nlynl0wc.us.auth0.com/api/v2/logout
+export ACCOUNT_AUTH0_LOGOUT_RETURN_URL=localhost:4000
+
 
 
 # /bin/mix ecto.drop
