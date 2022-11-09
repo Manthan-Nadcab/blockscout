@@ -88,7 +88,7 @@ config :ueberauth, Ueberauth,
   providers: [
     auth0_api: {
       Ueberauth.Strategy.Auth0,
-      [callback_url: "https://testnet.taralityscan.com/auth/auth0/callback"]
+      [callback_url: "https://testnet.taralityscan.com/auth/auth0_api/api_callback"]
     },
     auth0: {
       Ueberauth.Strategy.Auth0,
