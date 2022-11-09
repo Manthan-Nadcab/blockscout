@@ -88,11 +88,11 @@ config :ueberauth, Ueberauth,
   providers: [
     auth0_api: {
       Ueberauth.Strategy.Auth0,
-      [callback_url: "http://localhost:4000/auth/auth0_api/api_callback"]
+      [callback_url: "https://testnet.taralityscan.com/auth/auth0/callback"]
     },
     auth0: {
       Ueberauth.Strategy.Auth0,
-      [callback_url: "http://localhost:4000/auth/auth0/callback"]
+      [callback_url: "https://testnet.taralityscan.com/auth/auth0/callback"]
     }
   ]
 
