@@ -5,6 +5,7 @@ on:
     branches:
       - account
       - np-separate-account-encrypt-db-1
+      - taral_xdai
 
 env:
   MIX_ENV: test
@@ -12,7 +13,8 @@ env:
   ELIXIR_VERSION: '1.13.4'
   ACCOUNT_AUTH0_DOMAIN: 'dev-cwlk28b0nlynl0wc.us.auth0.com'
   ACCOUNT_AUTH0_LOGOUT_URL: 'https://dev-cwlk28b0nlynl0wc.us.auth0.com/v2/logout'
-  ACCOUNT_AUTH0_LOGOUT_RETURN_URL: 'http://localhost:4000/auth/logout'
+  ACCOUNT_AUTH0_LOGOUT_RETURN_URL: 'https://testnet.taralityscan.com/auth/logout'
+
 
 jobs:
   build-and-cache:
